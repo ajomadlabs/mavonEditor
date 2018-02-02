@@ -37,7 +37,7 @@ var config = {
         historyApiFallback: true,
         disableHostCheck: true,
         host: '0.0.0.0',
-        port: '9090'
+        port: '8080'
         // hot: true,
         // noInfo: true
     },
@@ -55,7 +55,7 @@ res.plugins = [
         filename: 'index.html',
         template: 'src/dev/index.html',
         inject: true,
-        hash: false,
+        hash: true,
         chunks: ['common', 'vue', 'index']
     })
 ].concat(res.plugins)

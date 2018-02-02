@@ -1,83 +1,88 @@
-Markdown 语法简介
-=============
-> [语法详解](http://commonmark.org/help/)
+Markdown Guide
+===
+> Detailed: [http://commonmark.org/help/](http://commonmark.org/help/)
 
-## **粗体**
+## **Bold**
 ```
-**粗体**
-__粗体__
+**bold**
+__bold__
 ```
-## *斜体*
+## *Italic*
 ```
-*斜体*
-_斜体_
+*italic*
+_italic_
 ```
-## 标题
+## Header
 ```
-# 一级标题 #
-一级标题
+# h1 #
+h1
 ====
-## 二级标题 ##
-二级标题
+## h2 ##
+h2
 ----
-### 三级标题 ###
-#### 四级标题 ####
-##### 五级标题 #####
-###### 六级标题 ######
+### h3 ###
+#### h4 ####
+##### h5 #####
+###### h6 ######
 ```
-## 分割线
+## Dividing line
 ```
 ***
 ---
 ```
 ****
-## ^上^角~下~标
+## ^Super^script & ~Sub~script
 ```
-上角标 x^2^
-下角标 H~2~0
+super x^2^
+sub H~2~0
 ```
-## ++下划线++ ~~中划线~~
+## ++Underline++ & ~~Strikethrough~~
 ```
-++下划线++
-~~中划线~~
+++underline++
+~~strikethrough~~
 ```
-## ==标记==
+## ==Mark==
 ```
-==标记==
+==mark==
 ```
-## 段落引用
+## Quote
+
 ```
-> 一级
->> 二级
->>> 三级
+> quote 1
+>> quote 2
+>>> quote 3
 ...
 ```
 
-## 列表
+## List
 ```
-有序列表
+ol
 1.
 2.
 3.
 ...
-无序列表
+
+ul
 -
 -
 ...
 ```
-## 链接
+## Link
 ```
-[链接](www.baidu.com)
-![图片描述](http://www.image.com)
+Text Link
+[Text](www.baidu.com)
+
+Image Link
+![Text](http://www.image.com)
 ```
-## 代码段落
+## Code
 \``` type
 
-代码段落
+code block
 
 \```
 
-\` 代码块 \`
+\` code \`
 
 ```c++
 int main()
@@ -86,28 +91,28 @@ int main()
 }
 ```
 `code`
-## 表格(table)
+
+## Table
 ```
-| 标题1 | 标题2 | 标题3 |
+| th1 | th2 | th3 |
 | :--  | :--: | ----: |
-| 左对齐 | 居中 | 右对齐 |
-| ---------------------- | ------------- | ----------------- |
+| left | center | right |
 ```
-| 标题1 | 标题2 | 标题3 |
+| th1 | th2 | th3 |
 | :--  | :--: | ----: |
-| 左对齐 | 居中 | 右对齐 |
+| left | center | right |
 | ---------------------- | ------------- | ----------------- |
-## 脚注(footnote)
+## Footnote
 ```
 hello[^hello]
 ```
 
-见底部脚注[^hello]
+Look at the bottom[^hello]
 
-[^hello]: 一个注脚
+[^hello]: footnote
 
-## 表情(emoji)
-[参考网站: https://www.webpagefx.com/tools/emoji-cheat-sheet/](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
+## Emojis
+Detailed: [https://www.webpagefx.com/tools/emoji-cheat-sheet/](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
 ```
 :laughing:
 :blush:
@@ -117,68 +122,70 @@ hello[^hello]
 ```
 :laughing::blush::smiley::)
 
-## $\KaTeX$公式
+## $\KaTeX$ Mathematics
 
-我们可以渲染公式例如：$x_i + y_i = z_i$和$\sum_{i=1}^n a_i=0$
-我们也可以单行渲染
+We can render formulas for example：$x_i + y_i = z_i$ and $\sum_{i=1}^n a_i=0$
+We can also single-line rendering
 $$\sum_{i=1}^n a_i=0$$
-具体可参照[katex文档](http://www.intmath.com/cg5/katex-mathjax-comparison.php)和[katex支持的函数](https://github.com/Khan/KaTeX/wiki/Function-Support-in-KaTeX)以及[latex文档](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+Detailed: [katex](http://www.intmath.com/cg5/katex-mathjax-comparison.php)和[katex function](https://github.com/Khan/KaTeX/wiki/Function-Support-in-KaTeX)以及[latex](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
-## 布局
+## Layout
 
 ::: hljs-left
 `::: hljs-left`
-`居左`
+`left`
 `:::`
 :::
 
 ::: hljs-center
 `::: hljs-center`
-`居中`
+`center`
 `:::`
 :::
 
 ::: hljs-right
 `::: hljs-right`
-`居右`
+`right`
 `:::`
 :::
 
-## 定义
+## deflist
 
-术语一
+Term 1
 
-:   定义一
+:   Definition 1
 
-包含有*行内标记*的术语二
+Term 2 with *inline markup*
 
-:   定义二
+:   Definition 2
 
-        {一些定义二的文字或代码}
+        { some code, part of Definition 2 }
 
-    定义二的第三段
+    Third paragraph of definition 2.
 
 ```
-术语一
+Term 1
 
-:   定义一
+:   Definition 1
 
-包含有*行内标记*的术语二
+Term 2 with *inline markup*
 
-:   定义二
+:   Definition 2
 
-        {一些定义二的文字或代码}
+        { some code, part of Definition 2 }
 
-    定义二的第三段
+    Third paragraph of definition 2.
 
 ```
 
 ## abbr
 *[HTML]: Hyper Text Markup Language
 *[W3C]:  World Wide Web Consortium
-HTML 规范由 W3C 维护
+The HTML specification
+is maintained by the W3C.
 ```
 *[HTML]: Hyper Text Markup Language
 *[W3C]:  World Wide Web Consortium
-HTML 规范由 W3C 维护
+The HTML specification
+is maintained by the W3C.
 ```
